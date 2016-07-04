@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>NFC Mifare DESFire Tool.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>223F01381D2A5C7D008F13CC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>223F014E1D2A5C7D008F13CC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>223F01591D2A5C7D008F13CC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
