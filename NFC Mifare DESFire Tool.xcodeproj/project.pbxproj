@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF0000020000000000000001 /* DFScript.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0000020000000000000002 /* DFScript.m */; };
+		DF0000010000000000000001 /* DESFireReader.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0000010000000000000002 /* DESFireReader.m */; };
+		DF0000010000000000000004 /* libuFCoder-macos.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0000010000000000000005 /* libuFCoder-macos.dylib */; };
+		DF0000010000000000000006 /* libuFCoder-macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = DF0000010000000000000005 /* libuFCoder-macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		223F013E1D2A5C7D008F13CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 223F013D1D2A5C7D008F13CC /* AppDelegate.m */; };
 		223F01411D2A5C7D008F13CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 223F01401D2A5C7D008F13CC /* main.m */; };
 		223F01441D2A5C7D008F13CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223F01431D2A5C7D008F13CC /* ViewController.m */; };
@@ -34,6 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF0000020000000000000002 /* DFScript.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFScript.m; sourceTree = "<group>"; };
+		DF0000020000000000000003 /* DFScript.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFScript.h; sourceTree = "<group>"; };
+		DF0000010000000000000002 /* DESFireReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DESFireReader.m; sourceTree = "<group>"; };
+		DF0000010000000000000003 /* DESFireReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DESFireReader.h; sourceTree = "<group>"; };
+		DF0000010000000000000005 /* libuFCoder-macos.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = Vendor/uFCoder/macos/arm64/libuFCoder-macos.dylib; sourceTree = SOURCE_ROOT; };
 		223F01391D2A5C7D008F13CC /* NFC Mifare DESFire Tool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NFC Mifare DESFire Tool.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		223F013C1D2A5C7D008F13CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		223F013D1D2A5C7D008F13CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF0000010000000000000004 /* libuFCoder-macos.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,10 +85,25 @@
 		};
 /* End PBXFrameworksBuildPhase section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DF0000010000000000000007 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DF0000010000000000000006 /* libuFCoder-macos.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXGroup section */
 		223F01301D2A5C7D008F13CC = {
 			isa = PBXGroup;
 			children = (
+				DF0000010000000000000005 /* libuFCoder-macos.dylib */,
 				223F013B1D2A5C7D008F13CC /* NFC Mifare DESFire Tool */,
 				223F01521D2A5C7D008F13CC /* NFC Mifare DESFire ToolTests */,
 				223F015D1D2A5C7D008F13CC /* NFC Mifare DESFire ToolUITests */,
@@ -99,10 +124,14 @@
 		223F013B1D2A5C7D008F13CC /* NFC Mifare DESFire Tool */ = {
 			isa = PBXGroup;
 			children = (
+				DF0000010000000000000002 /* DESFireReader.m */,
+				DF0000010000000000000003 /* DESFireReader.h */,
 				223F013C1D2A5C7D008F13CC /* AppDelegate.h */,
 				223F013D1D2A5C7D008F13CC /* AppDelegate.m */,
 				223F01421D2A5C7D008F13CC /* ViewController.h */,
 				223F01431D2A5C7D008F13CC /* ViewController.m */,
+				DF0000020000000000000002 /* DFScript.m */,
+				DF0000020000000000000003 /* DFScript.h */,
 				223F01451D2A5C7D008F13CC /* Assets.xcassets */,
 				223F01471D2A5C7D008F13CC /* Main.storyboard */,
 				223F014A1D2A5C7D008F13CC /* Info.plist */,
@@ -147,6 +176,7 @@
 				223F01351D2A5C7D008F13CC /* Sources */,
 				223F01361D2A5C7D008F13CC /* Frameworks */,
 				223F01371D2A5C7D008F13CC /* Resources */,
+				DF0000010000000000000007 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -266,6 +296,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF0000010000000000000001 /* DESFireReader.m in Sources */,
+				DF0000020000000000000001 /* DFScript.m in Sources */,
 				223F01441D2A5C7D008F13CC /* ViewController.m in Sources */,
 				223F01411D2A5C7D008F13CC /* main.m in Sources */,
 				223F013E1D2A5C7D008F13CC /* AppDelegate.m in Sources */,
@@ -319,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -352,7 +385,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -363,6 +396,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -390,7 +424,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -402,6 +436,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "NFC Mifare DESFire Tool/Info.plist";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Vendor/uFCoder/include";
+				OTHER_LDFLAGS = ("$(inherited)", "-framework", Security, );
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Vendor/uFCoder/macos/arm64";
+				ENABLE_APP_SANDBOX = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.desfire.NFC-Mifare-DESFire-Tool";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,6 +452,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "NFC Mifare DESFire Tool/Info.plist";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Vendor/uFCoder/include";
+				OTHER_LDFLAGS = ("$(inherited)", "-framework", Security, );
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Vendor/uFCoder/macos/arm64";
+				ENABLE_APP_SANDBOX = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.desfire.NFC-Mifare-DESFire-Tool";
 				PRODUCT_NAME = "$(TARGET_NAME)";
